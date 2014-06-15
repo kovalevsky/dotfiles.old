@@ -1,0 +1,21 @@
+[user]
+  name = <%= `git config --global --get user.name`.chomp || (print("Your Name: "); STDOUT.flush; STDIN.gets.chomp) %>
+  email = <%= `git config --global --get user.email`.chomp || (print("Your Email: "); STDOUT.flush; STDIN.gets.chomp) %>
+[alias]
+  co = checkout
+  st = status
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = subl
+  autocrlf = input
+[apply]
+  whitespace = nowarn
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[github]
+  user = <%= `git config --global --get github.user`.chomp || (print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp) %>
+  token = <%= `git config --global --get github.token`.chomp || (print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp) %>

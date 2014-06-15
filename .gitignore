@@ -1,0 +1,12 @@
+.bundle/
+/vendor/bundle
+
+/tmp
+.tags
+.tags_sorted_by_file
+.irb-history
+
+*.sublime-project
+*.sublime-workspace
+.idea
+*.swp
