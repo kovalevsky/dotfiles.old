@@ -10,9 +10,9 @@ ZSH_THEME="sk"
 # DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundler brew gem capistrano rake-fast vagrant history-substring-search extract)
+plugins=(git bundler brew gem rake-fast vagrant history-substring-search extract)
 
 setopt hist_ignore_space
 setopt menucomplete
@@ -20,9 +20,6 @@ setopt menucomplete
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="/Users/sk/.rvm/gems/ruby-2.1.1/bin:/Users/sk/.rvm/gems/ruby-2.1.1@global/bin:/Users/sk/.rvm/rubies/ruby-2.1.1/bin:/Users/sk/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/sk/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -32,6 +29,3 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='subl'
 fi
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
