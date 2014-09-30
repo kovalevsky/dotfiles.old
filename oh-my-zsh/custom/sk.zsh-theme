@@ -12,6 +12,7 @@ prompt_setup_sk(){
   base_prompt_nocolor=$(echo "$base_prompt" | perl -pe "s/%\{[^}]+\}//g")
   post_prompt_nocolor=$(echo "$post_prompt" | perl -pe "s/%\{[^}]+\}//g")
 
+  autoload -U add-zsh-hook
   add-zsh-hook precmd prompt_sk_precmd
 }
 
